@@ -54,6 +54,11 @@ namespace InstructionDecoder
             }
         }
 
+        /// <summary>
+        /// displays the next line of instructions
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender , EventArgs e)
         {
             if (listBoxInputStream.Items.Count - 1 > 0)
@@ -85,6 +90,11 @@ namespace InstructionDecoder
             }
         }
 
+        /// <summary>
+        /// Displays decode instructions when index has changed. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listBoxInputStream_SelectedIndexChanged(object sender, EventArgs e)
         {
             string temp = listBoxInputStream.SelectedItem.ToString();
@@ -109,6 +119,11 @@ namespace InstructionDecoder
                 textBoxRegisters.Text = values[3];
         }
 
+        /// <summary>
+        /// Clears all decode information and input file ListBox. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonClearInput_Click(object sender, EventArgs e)
         {
             listBoxInputStream.Items.Clear();
@@ -118,6 +133,29 @@ namespace InstructionDecoder
             textBoxProgramCounter.Clear();
             textBoxRegisters.Clear();
             textBoxAddrMode.Clear();
+
+        }
+
+        /// <summary>
+        /// displays all the lines of instructions in the text boxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonDecodeAll_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < listBoxInputStream.Items.Count; i++)
+            {
+                string temp = listBoxInputStream.Items[i].ToString();
+                int instruction = Convert.ToInt32(temp, 2);
+
+                temp = cpu.DecodeInstruction(instruction);
+                string[] values = temp.Split('\t');
+                textBoxProgramCounter.Text += values[0] + Environment.NewLine;
+                textBoxHex.Text += values[1] + Environment.NewLine;
+                textBoxInstruction.Text += values[2] + Environment.NewLine;
+                textBoxRegisters.Text += values[3] + Environment.NewLine;
+            }
+
         }
     }
 }

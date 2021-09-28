@@ -482,6 +482,7 @@ namespace InstructionDecoder
             this.buttonDecodeAll.TabIndex = 9;
             this.buttonDecodeAll.Text = "Decode All";
             this.buttonDecodeAll.UseVisualStyleBackColor = true;
+            this.buttonDecodeAll.Click += new System.EventHandler(this.buttonDecodeAll_Click);
             // 
             // buttonDecodeNext
             // 
@@ -518,7 +519,7 @@ namespace InstructionDecoder
             // buttonClearInput
             // 
             this.buttonClearInput.Location = new System.Drawing.Point(451, 275);
-            this.buttonClearInput.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonClearInput.Margin = new System.Windows.Forms.Padding(0);
             this.buttonClearInput.Name = "buttonClearInput";
             this.buttonClearInput.Size = new System.Drawing.Size(110, 28);
             this.buttonClearInput.TabIndex = 11;
