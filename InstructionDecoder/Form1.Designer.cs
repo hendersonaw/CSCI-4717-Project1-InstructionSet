@@ -75,6 +75,7 @@ namespace InstructionDecoder
             this.buttonDecodeNext = new System.Windows.Forms.Button();
             this.buttonInputFile = new System.Windows.Forms.Button();
             this.listBoxInputStream = new System.Windows.Forms.ListBox();
+            this.buttonClearInput = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelProgramCounter
@@ -514,6 +515,18 @@ namespace InstructionDecoder
             this.listBoxInputStream.Name = "listBoxInputStream";
             this.listBoxInputStream.Size = new System.Drawing.Size(877, 496);
             this.listBoxInputStream.TabIndex = 10;
+            this.listBoxInputStream.SelectedIndexChanged += new System.EventHandler(this.listBoxInputStream_SelectedIndexChanged);
+            // 
+            // buttonClearInput
+            // 
+            this.buttonClearInput.Location = new System.Drawing.Point(451, 275);
+            this.buttonClearInput.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonClearInput.Name = "buttonClearInput";
+            this.buttonClearInput.Size = new System.Drawing.Size(110, 28);
+            this.buttonClearInput.TabIndex = 11;
+            this.buttonClearInput.Text = "Clear Input";
+            this.buttonClearInput.UseVisualStyleBackColor = true;
+            this.buttonClearInput.Click += new System.EventHandler(this.buttonClearInput_Click);
             // 
             // Form1
             // 
@@ -524,6 +537,7 @@ namespace InstructionDecoder
             this.Controls.Add(this.buttonInputFile);
             this.Controls.Add(this.buttonDecodeNext);
             this.Controls.Add(this.buttonDecodeAll);
+            this.Controls.Add(this.buttonClearInput);
             this.Controls.Add(this.textBoxx8);
             this.Controls.Add(this.textBoxx9);
             this.Controls.Add(this.textBoxx10);
@@ -622,6 +636,7 @@ namespace InstructionDecoder
         private System.Windows.Forms.Button buttonDecodeNext;
         private System.Windows.Forms.Button buttonInputFile;
         private System.Windows.Forms.ListBox listBoxInputStream;
+        private System.Windows.Forms.Button buttonClearInput;
     }
 }
 

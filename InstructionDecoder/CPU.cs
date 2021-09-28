@@ -20,6 +20,12 @@ namespace InstructionDecoder
         }
 
         /// <summary>
+        /// Gets the INSTRUCTION_SIZE constant. 
+        /// </summary>
+        /// <returns>Integer value of instruction size.</returns>
+        public int GetInstructionSize() { return INSTRUCTION_SIZE;  }
+
+        /// <summary>
         /// Decodes the passed instruction
         /// </summary>
         /// <param name="instruction">Int value of instruction (think in terms of bits)</param>
@@ -87,7 +93,7 @@ namespace InstructionDecoder
                 default:
                     break;
             }
-            programCounter += INSTRUCTION_SIZE;
+            //programCounter += INSTRUCTION_SIZE;
             return strInstruction;
         }
 
