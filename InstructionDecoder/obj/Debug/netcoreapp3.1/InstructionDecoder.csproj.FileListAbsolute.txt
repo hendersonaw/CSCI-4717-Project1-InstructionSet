@@ -1,0 +1,30 @@
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.exe
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.deps.json
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.runtimeconfig.json
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.runtimeconfig.dev.json
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.dll
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.pdb
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.csproj.AssemblyReference.cache
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.Form1.resources
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.csproj.GenerateResource.cache
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.AssemblyInfoInputs.cache
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.AssemblyInfo.cs
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.csproj.CoreCompileInputs.cache
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.dll
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.pdb
+C:\Users\rocky\Source\Repos\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.genruntimeconfig.cache
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.exe
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.deps.json
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.runtimeconfig.json
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.runtimeconfig.dev.json
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.dll
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\bin\Debug\netcoreapp3.1\InstructionDecoder.pdb
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.csprojAssemblyReference.cache
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.Form1.resources
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.csproj.GenerateResource.cache
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.AssemblyInfoInputs.cache
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.AssemblyInfo.cs
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.csproj.CoreCompileInputs.cache
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.dll
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.pdb
+C:\Users\hubba\OneDrive - East Tennessee State University\11- Fall 2021\CSCI 4717 - Computer Architecture\CSCI-4717-Project1-InstructionSet\InstructionDecoder\obj\Debug\netcoreapp3.1\InstructionDecoder.genruntimeconfig.cache
