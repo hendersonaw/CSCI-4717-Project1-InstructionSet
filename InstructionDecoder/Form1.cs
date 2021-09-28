@@ -69,10 +69,13 @@ namespace InstructionDecoder
                 textBoxHex.Clear();
                 textBoxInstruction.Clear();
                 textBoxProgramCounter.Clear();
+                textBoxRegisters.Clear();
+                textBoxAddrMode.Clear();
+                int programCounter = listBoxInputStream.SelectedIndex * cpu.GetInstructionSize();
                 temp = cpu.DecodeInstruction(instruction);
                 string[] values = temp.Split('\t');
                 if(values.Length >= 1)
-                    textBoxProgramCounter.Text = values[0];
+                    textBoxProgramCounter.Text = programCounter.ToString("0000");
                 if (values.Length >= 2)
                     textBoxHex.Text = values[1];
                 if (values.Length >= 3)
@@ -80,6 +83,41 @@ namespace InstructionDecoder
                 if (values.Length >= 4)
                     textBoxRegisters.Text = values[3];
             }
+        }
+
+        private void listBoxInputStream_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string temp = listBoxInputStream.SelectedItem.ToString();
+            int instruction = Convert.ToInt32(temp, 2);
+            temp = "";
+            textBoxAddrMode.Clear();
+            textBoxHex.Clear();
+            textBoxInstruction.Clear();
+            textBoxProgramCounter.Clear();
+            textBoxRegisters.Clear();
+            textBoxAddrMode.Clear();
+            int programCounter = listBoxInputStream.SelectedIndex * cpu.GetInstructionSize();
+            temp = cpu.DecodeInstruction(instruction);
+            string[] values = temp.Split('\t');
+            if (values.Length >= 1)
+                textBoxProgramCounter.Text = programCounter.ToString("0000");
+            if (values.Length >= 2)
+                textBoxHex.Text = values[1];
+            if (values.Length >= 3)
+                textBoxInstruction.Text = values[2];
+            if (values.Length >= 4)
+                textBoxRegisters.Text = values[3];
+        }
+
+        private void buttonClearInput_Click(object sender, EventArgs e)
+        {
+            listBoxInputStream.Items.Clear();
+            textBoxAddrMode.Clear();
+            textBoxHex.Clear();
+            textBoxInstruction.Clear();
+            textBoxProgramCounter.Clear();
+            textBoxRegisters.Clear();
+            textBoxAddrMode.Clear();
         }
     }
 }
