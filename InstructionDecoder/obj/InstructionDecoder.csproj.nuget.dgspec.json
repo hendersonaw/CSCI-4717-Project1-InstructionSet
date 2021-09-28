@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rocky\\source\\repos\\Project1\\temp\\InstructionDecoder\\InstructionDecoder.csproj": {}
+    "C:\\Users\\rocky\\Source\\Repos\\CSCI-4717-Project1-InstructionSet\\InstructionDecoder\\InstructionDecoder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rocky\\source\\repos\\Project1\\temp\\InstructionDecoder\\InstructionDecoder.csproj": {
+    "C:\\Users\\rocky\\Source\\Repos\\CSCI-4717-Project1-InstructionSet\\InstructionDecoder\\InstructionDecoder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rocky\\source\\repos\\Project1\\temp\\InstructionDecoder\\InstructionDecoder.csproj",
+        "projectUniqueName": "C:\\Users\\rocky\\Source\\Repos\\CSCI-4717-Project1-InstructionSet\\InstructionDecoder\\InstructionDecoder.csproj",
         "projectName": "InstructionDecoder",
-        "projectPath": "C:\\Users\\rocky\\source\\repos\\Project1\\temp\\InstructionDecoder\\InstructionDecoder.csproj",
+        "projectPath": "C:\\Users\\rocky\\Source\\Repos\\CSCI-4717-Project1-InstructionSet\\InstructionDecoder\\InstructionDecoder.csproj",
         "packagesPath": "C:\\Users\\rocky\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rocky\\source\\repos\\Project1\\temp\\InstructionDecoder\\obj\\",
+        "outputPath": "C:\\Users\\rocky\\Source\\Repos\\CSCI-4717-Project1-InstructionSet\\InstructionDecoder\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rocky\\AppData\\Roaming\\NuGet\\NuGet.Config",

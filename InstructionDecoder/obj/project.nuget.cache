@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ucFLxBNBetnZJXaPTrQlqWa86Krkghwhxkixjro4lR9O/tS27k3OWrNzcm/mw+pC7zKFNtiKJu6sU2/vLuRjVg==",
+  "dgSpecHash": "r1Z4vu9ZYRypMFYEJfAjWuPatB/JO0iGLHUJarTDJGwODW60HlR+aM+Aq0e3sCMW4KLFUkEN7TXzH43P4NQoHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rocky\\source\\repos\\Project1\\temp\\InstructionDecoder\\InstructionDecoder.csproj",
+  "projectFilePath": "C:\\Users\\rocky\\Source\\Repos\\CSCI-4717-Project1-InstructionSet\\InstructionDecoder\\InstructionDecoder.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
