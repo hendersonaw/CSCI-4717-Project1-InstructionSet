@@ -130,8 +130,8 @@ namespace InstructionDecoder
             string strInstruction = programCounter.ToString("0000") + "\t";
             strInstruction += "0D\t";
             strInstruction += "AND\t";
-            strInstruction += getRegister(instruction, 4) + ",";
-            strInstruction += getRegister(instruction, 8) + ",";
+            strInstruction += getRegister(instruction, 4) + ", ";
+            strInstruction += getRegister(instruction, 8) + ", ";
             strInstruction += getRegister(instruction, 12);
 
             return strInstruction;
@@ -186,8 +186,8 @@ namespace InstructionDecoder
         private string Sub(int instruction)
         {
             string strInstruction = programCounter.ToString("0000") + "\t";
-            strInstruction += "04,";
-            strInstruction += "SUB,";
+            strInstruction += "04\t";
+            strInstruction += "SUB\t";
             strInstruction += getRegister(instruction, 4) + ", ";
             strInstruction += getRegister(instruction, 8) + ", ";
             strInstruction += getRegister(instruction, 12);
@@ -198,8 +198,8 @@ namespace InstructionDecoder
         private string Je(int instruction)
         {
             string strInstruction = programCounter.ToString("0000") + "\t";
-            strInstruction += "06,";
-            strInstruction += "JE,";
+            strInstruction += "06\t";
+            strInstruction += "JE\t";
             strInstruction += getRegister(instruction, 4) + ", ";
             strInstruction += getRegister(instruction, 8) + ", ";
             strInstruction += getRegister(instruction, 12);
@@ -210,8 +210,8 @@ namespace InstructionDecoder
         private string Jne(int instruction)
         {
             string strInstruction = programCounter.ToString("0000") + "\t";
-            strInstruction += "07,";
-            strInstruction += "JNE,";
+            strInstruction += "07\t";
+            strInstruction += "JNE\t";
             strInstruction += getRegister(instruction, 4) + ", ";
             strInstruction += getRegister(instruction, 8) + ", ";
             strInstruction += getRegister(instruction, 12);
