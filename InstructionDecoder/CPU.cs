@@ -47,15 +47,18 @@ namespace InstructionDecoder
                     break;
                 case 4:
                     // Sub
+                    strInstruction = Sub(instruction);
                     break;
                 case 5:
                     // Jmp
                     break;
                 case 6:
                     // Je
+                    strInstruction = Je(instruction);
                     break;
                 case 7:
                     // Jne
+                    strInstruction = Jne(instruction);
                     break;
                 case 8:
                     strInstruction = Increment(instruction);
@@ -171,6 +174,11 @@ namespace InstructionDecoder
             return strInstruction;
         }
 
+        /// <summary>
+        /// Translates the given ADD instruction to a string. 
+        /// </summary>
+        /// <param name="instruction">16-bit instruction.</param>
+        /// <returns>String value of given ADD instruction.</returns>
         private string Add(int instruction)
         {
             string strInstruction = programCounter.ToString("0000") + "\t";
@@ -183,6 +191,11 @@ namespace InstructionDecoder
             return strInstruction;
         }
 
+        /// <summary>
+        /// Translates the given SUB instruction to a string. 
+        /// </summary>
+        /// <param name="instruction">16-bit instruction.</param>
+        /// <returns>String value of given SUB instruction.</returns>
         private string Sub(int instruction)
         {
             string strInstruction = programCounter.ToString("0000") + "\t";
@@ -195,6 +208,11 @@ namespace InstructionDecoder
             return strInstruction;
         }
 
+        /// <summary>
+        /// Translates the given JE instruction to a string. 
+        /// </summary>
+        /// <param name="instruction">16-bit instruction.</param>
+        /// <returns>String value of given JE instruction.</returns>
         private string Je(int instruction)
         {
             string strInstruction = programCounter.ToString("0000") + "\t";
@@ -207,6 +225,11 @@ namespace InstructionDecoder
             return strInstruction;
         }
 
+        /// <summary>
+        /// Translates the given JNE instruction to a string. 
+        /// </summary>
+        /// <param name="instruction">16-bit instruction.</param>
+        /// <returns>String value of given JNE instruction.</returns>
         private string Jne(int instruction)
         {
             string strInstruction = programCounter.ToString("0000") + "\t";
