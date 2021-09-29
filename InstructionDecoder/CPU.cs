@@ -93,7 +93,7 @@ namespace InstructionDecoder
                 default:
                     break;
             }
-            //programCounter += INSTRUCTION_SIZE;
+            programCounter += INSTRUCTION_SIZE;
             return strInstruction;
         }
 
