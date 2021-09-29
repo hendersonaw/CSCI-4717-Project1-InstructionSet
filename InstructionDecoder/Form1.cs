@@ -133,7 +133,6 @@ namespace InstructionDecoder
             textBoxProgramCounter.Clear();
             textBoxRegisters.Clear();
             textBoxAddrMode.Clear();
-
         }
 
         /// <summary>
@@ -143,14 +142,21 @@ namespace InstructionDecoder
         /// <param name="e"></param>
         private void buttonDecodeAll_Click(object sender, EventArgs e)
         {
+            textBoxAddrMode.Clear();
+            textBoxHex.Clear();
+            textBoxInstruction.Clear();
+            textBoxProgramCounter.Clear();
+            textBoxRegisters.Clear();
+            textBoxAddrMode.Clear();
             for (int i = 0; i < listBoxInputStream.Items.Count; i++)
             {
                 string temp = listBoxInputStream.Items[i].ToString();
                 int instruction = Convert.ToInt32(temp, 2);
+                int programCounter = i * cpu.GetInstructionSize();
 
                 temp = cpu.DecodeInstruction(instruction);
                 string[] values = temp.Split('\t');
-                textBoxProgramCounter.Text += values[0] + Environment.NewLine;
+                textBoxProgramCounter.Text += programCounter.ToString("0000") + Environment.NewLine;
                 textBoxHex.Text += values[1] + Environment.NewLine;
                 textBoxInstruction.Text += values[2] + Environment.NewLine;
                 textBoxRegisters.Text += values[3] + Environment.NewLine;
