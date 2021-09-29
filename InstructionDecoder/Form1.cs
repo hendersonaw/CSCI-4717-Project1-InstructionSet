@@ -31,6 +31,29 @@ namespace InstructionDecoder
 
         }
 
+        /// <summary>
+        /// Loads the register text boxes
+        /// </summary>
+        private void loadRegisters()
+        {
+            textBoxx0.Text = cpu.Registers[0].Value.ToString("X");
+            textBoxx1.Text = cpu.Registers[1].Value.ToString("X");
+            textBoxx2.Text = cpu.Registers[2].Value.ToString("X");
+            textBoxx3.Text = cpu.Registers[3].Value.ToString("X");
+            textBoxx4.Text = cpu.Registers[4].Value.ToString("X");
+            textBoxx5.Text = cpu.Registers[5].Value.ToString("X");
+            textBoxx6.Text = cpu.Registers[6].Value.ToString("X");
+            textBoxx7.Text = cpu.Registers[7].Value.ToString("X");
+            textBoxx8.Text = cpu.Registers[8].Value.ToString("X");
+            textBoxx9.Text = cpu.Registers[9].Value.ToString("X");
+            textBoxx10.Text = cpu.Registers[10].Value.ToString("X");
+            textBoxx11.Text = cpu.Registers[11].Value.ToString("X");
+            textBoxx12.Text = cpu.Registers[12].Value.ToString("X");
+            textBoxx13.Text = cpu.Registers[13].Value.ToString("X");
+            textBoxx14.Text = cpu.Registers[14].Value.ToString("X");
+            textBoxx15.Text = cpu.Registers[15].Value.ToString("X");
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             string filePath = "";
@@ -67,27 +90,8 @@ namespace InstructionDecoder
                     listBoxInputStream.SelectedIndex = 0;
                 else if (listBoxInputStream.SelectedIndex < listBoxInputStream.Items.Count - 1)
                     listBoxInputStream.SelectedIndex++;
-                string temp = listBoxInputStream.SelectedItem.ToString();
-                int instruction = Convert.ToInt32(temp, 2);
-                temp = "";
-                textBoxAddrMode.Clear();
-                textBoxHex.Clear();
-                textBoxInstruction.Clear();
-                textBoxProgramCounter.Clear();
-                textBoxRegisters.Clear();
-                textBoxAddrMode.Clear();
-                int programCounter = listBoxInputStream.SelectedIndex * cpu.GetInstructionSize();
-                temp = cpu.DecodeInstruction(instruction);
-                string[] values = temp.Split('\t');
-                if(values.Length >= 1)
-                    textBoxProgramCounter.Text = programCounter.ToString("0000");
-                if (values.Length >= 2)
-                    textBoxHex.Text = values[1];
-                if (values.Length >= 3)
-                    textBoxInstruction.Text = values[2];
-                if (values.Length >= 4)
-                    textBoxRegisters.Text = values[3];
             }
+                
         }
 
         /// <summary>
@@ -97,6 +101,7 @@ namespace InstructionDecoder
         /// <param name="e"></param>
         private void listBoxInputStream_SelectedIndexChanged(object sender, EventArgs e)
         {
+            bool loadImediate = false;
             string temp = listBoxInputStream.SelectedItem.ToString();
             int instruction = Convert.ToInt32(temp, 2);
             temp = "";
@@ -107,8 +112,20 @@ namespace InstructionDecoder
             textBoxRegisters.Clear();
             textBoxAddrMode.Clear();
             int programCounter = listBoxInputStream.SelectedIndex * cpu.GetInstructionSize();
-            temp = cpu.DecodeInstruction(instruction);
+            cpu.Registers[13].Value = programCounter;
+            loadRegisters();
+            temp = cpu.DecodeInstruction(instruction, ref loadImediate);
             string[] values = temp.Split('\t');
+            if (loadImediate)
+            {
+                listBoxInputStream.SelectedIndex++;
+                temp = listBoxInputStream.SelectedItem.ToString();
+                instruction = Convert.ToInt32(temp, 2);
+                temp = cpu.DecodeInstruction(instruction, ref loadImediate);
+            }
+            else
+                temp = "";
+
             if (values.Length >= 1)
                 textBoxProgramCounter.Text = programCounter.ToString("0000");
             if (values.Length >= 2)
@@ -116,7 +133,9 @@ namespace InstructionDecoder
             if (values.Length >= 3)
                 textBoxInstruction.Text = values[2];
             if (values.Length >= 4)
-                textBoxRegisters.Text = values[3];
+                textBoxRegisters.Text = values[3] + temp;
+            if (values.Length >= 5)
+                textBoxAddrMode.Text = values[4];
         }
 
         /// <summary>
@@ -142,6 +161,7 @@ namespace InstructionDecoder
         /// <param name="e"></param>
         private void buttonDecodeAll_Click(object sender, EventArgs e)
         {
+            bool loadImediate = false;
             textBoxAddrMode.Clear();
             textBoxHex.Clear();
             textBoxInstruction.Clear();
@@ -154,12 +174,22 @@ namespace InstructionDecoder
                 int instruction = Convert.ToInt32(temp, 2);
                 int programCounter = i * cpu.GetInstructionSize();
 
-                temp = cpu.DecodeInstruction(instruction);
+                temp = cpu.DecodeInstruction(instruction, ref loadImediate);
                 string[] values = temp.Split('\t');
                 textBoxProgramCounter.Text += programCounter.ToString("0000") + Environment.NewLine;
+                if (loadImediate)
+                {
+                    i++;
+                    temp = listBoxInputStream.Items[i].ToString();
+                    instruction = Convert.ToInt32(temp, 2);
+                    temp = cpu.DecodeInstruction(instruction, ref loadImediate);
+                }
+                else
+                    temp = "";
+
                 textBoxHex.Text += values[1] + Environment.NewLine;
                 textBoxInstruction.Text += values[2] + Environment.NewLine;
-                textBoxRegisters.Text += values[3] + Environment.NewLine;
+                textBoxRegisters.Text += values[3] + temp + Environment.NewLine;
             }
 
         }
